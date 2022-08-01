@@ -9,6 +9,7 @@ useHead({
 <template>
   <main>
     <router-view />
+    <Avatar />
     <Footer />
   </main>
 </template>
