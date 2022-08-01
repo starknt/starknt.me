@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite-ssg build",
+    "build": "vite-ssg build",
     "preview": "vite preview",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -44,6 +44,7 @@
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.6.4",
     "markdown-it-link-attributes": "^4.0.0",
+    "markdown-it-shiki": "^0.5.1",
     "pnpm": "^7.5.2",
     "simple-git-hooks": "^2.8.0",
     "typescript": "^4.7.4",

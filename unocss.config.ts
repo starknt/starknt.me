@@ -14,9 +14,9 @@ export default defineConfig({
     presetAttributify(),
     presetWebFonts({
       fonts: {
-        sans: 'Inter',
-        mono: 'DM Mono',
-      },
-    }),
+        sans: 'Roboto',
+        mono: ['Fira Code', 'Fira Mono:400,700'],
+      }
+    })
   ],
 })

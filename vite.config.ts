@@ -6,6 +6,7 @@ import Pages from 'vite-plugin-pages'
 import Markdown from 'vite-plugin-vue-markdown'
 import anchor from 'markdown-it-anchor'
 import LinkAttributes from 'markdown-it-link-attributes'
+import Shiki from 'markdown-it-shiki'
 import { slugify } from './slugify'
 import { defineConfig } from 'vite'
 import { alias } from './alias'
@@ -44,11 +45,19 @@ export default defineConfig({
       extensions: ['vue', 'md']
     }),
     Markdown({
+      wrapperClasses: 'prose m-auto',
       headEnabled: true,
       markdownItOptions: {
         quotes: '""\'\'',
       },
       markdownItSetup(md) {
+        md.use(Shiki, {
+          theme: {
+            light: 'material-lighter',
+            dark: 'material-darker',
+          },
+        })
+
         md.use(anchor, {
           permalink: anchor.permalink.linkInsideHeader({
             symbol: "#",

@@ -4,6 +4,8 @@ import routes from '~pages'
 import dayjs from 'dayjs'
 import LocalizedFormat from 'dayjs/plugin/localizedFormat.js'
 import 'uno.css'
+import './styles/main.css'
+import './styles/markdown.css'
 
 const scrollBehavior = (to: any, from: any, savedPosition: any) => {
   if (savedPosition)

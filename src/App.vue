@@ -7,9 +7,8 @@ useHead({
 </script>
 
 <template>
-  <main>
+  <main flex justify-center items-center flex-col>
     <router-view />
-    <Avatar />
     <Footer />
   </main>
 </template>

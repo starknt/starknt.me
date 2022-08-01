@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url("/fonts/JetBrainsMono-Regular.woff2") format("woff2");
+}
+
+html.dark .shiki-light {
+  display: none;
+}
+
+html:not(.dark) .shiki-dark {
+  display: none;
+}
