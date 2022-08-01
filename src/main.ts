@@ -6,6 +6,7 @@ import LocalizedFormat from 'dayjs/plugin/localizedFormat.js'
 import 'uno.css'
 import './styles/main.css'
 import './styles/markdown.css'
+import './styles/prose.css'
 
 const scrollBehavior = (to: any, from: any, savedPosition: any) => {
   if (savedPosition)

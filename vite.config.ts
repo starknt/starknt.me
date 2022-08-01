@@ -7,6 +7,7 @@ import Markdown from 'vite-plugin-vue-markdown'
 import anchor from 'markdown-it-anchor'
 import LinkAttributes from 'markdown-it-link-attributes'
 import Shiki from 'markdown-it-shiki'
+import TOC from 'markdown-it-table-of-contents'
 import { slugify } from './slugify'
 import { defineConfig } from 'vite'
 import { alias } from './alias'
@@ -72,6 +73,11 @@ export default defineConfig({
             target: '_blank',
             rel: 'noopener',
           },
+        })
+
+        md.use(TOC, {
+          includeLevel: [1, 2, 3],
+          slugify,
         })
       }
     })

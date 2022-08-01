@@ -7,7 +7,8 @@ useHead({
 </script>
 
 <template>
-  <main flex justify-center items-center flex-col>
+  <SubNav />
+  <main px-7 py-10>
     <router-view />
     <Footer />
   </main>

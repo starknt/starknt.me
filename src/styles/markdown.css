@@ -5,7 +5,6 @@
 }
 
 .prose .shiki {
-  @apply font-mono;
   font-size: 16px;
   line-height: 1.5;
   margin: 0.5em 0;
@@ -19,11 +18,11 @@
 }
 
 .shiki-light {
-  background: #f8f8f8 !important;
+  background: #f8f8f8eb !important;
 }
 
 .shiki-dark {
-  background: #0e0e0e !important;
+  background: #242323c9 !important;
 }
 
 html.dark .shiki-light {
@@ -145,18 +144,18 @@ h6:focus .header-anchor {
   top: 80px;
   padding-top: 70px;
   font-size: 0.8em;
-  right: 10px;
-  width: 200px;
+  right: 20px;
+  width: 260px;
   bottom: 0;
   overflow-y: auto;
   overflow-x: hidden;
   text-overflow: ellipsis;
-  opacity: 0;
+  opacity: 0.5;
   transition: all .4s ease-out;
 }
 
 .table-of-contents:hover {
-  opacity: 0.5;
+  opacity: 0.9;
 }
 
 .table-of-contents ul>li::before {
