@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "noImplicitAny": false,
+    "suppressImplicitAnyIndexErrors": false,
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "baseUrl": ".",
+    "skipLibCheck": true,
+    "paths": {
+      "~/*": [
+        "src/*"
+      ]
+    },
+    "types": []
+  },
+  "include": [
+    "src",
+    "./components.d.ts",
+    "./auto-imports.d.ts",
+    "./shims.d.ts",
+    "./env.d.ts"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "types": [
+      "node",
+      "vitest/globals",
+      "vitest",
+      "vite-ssg"
+    ]
+  },
+  "include": [
+    "vite.config.ts",
+    "alias.ts",
+    "slugify.ts"
+  ]
+}
