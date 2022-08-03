@@ -11,7 +11,7 @@ const avatarSize = $computed(() => `${props.size}px`)
 
 <template>
   <div inline-flex overflow-hidden class="rounded-50% size">
-    <img w-full h-full block src="https://avatars.githubusercontent.com/u/64941905?v=4" alt="avatar" />
+    <img w-full h-full block src="/avatar.jfif" alt="avatar" />
   </div>
 </template>
 

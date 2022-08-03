@@ -28,12 +28,12 @@ export default defineConfig({
         'vue/macros',
         '@vueuse/core',
         '@vueuse/head',
-        'vue-router'
+        'vue-router',
       ],
       dts: 'auto-imports.d.ts',
       dirs: [
         './src/composables',
-      ],
+      ]
     }),
     Components({
       extensions: ['vue', 'md'],
@@ -42,6 +42,9 @@ export default defineConfig({
       dirs: [
         './src/components',
       ],
+      resolvers: [
+
+      ]
     }),
     Pages({
       extensions: ['vue', 'md']

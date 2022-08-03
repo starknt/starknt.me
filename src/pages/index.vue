@@ -1,0 +1,4 @@
+<template>
+  <SubNav />
+  <RouterView />
+</template>
