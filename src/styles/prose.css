@@ -222,8 +222,14 @@
 .prose thead {
   color: #111827;
   font-weight: 600;
-  border-bottom-width: 1px;
-  border-bottom-color: #d1d5db;
+  border: 1px solid;
+  border-color: #2c2d2e;
+}
+
+html.dark .prose thead {
+  color: #58595d;
+  border: 1px solid;
+  border-color: #e5e7eb;
 }
 
 .prose thead th {
@@ -234,8 +240,13 @@
 }
 
 .prose tbody tr {
-  border-bottom-width: 1px;
-  border-bottom-color: #e5e7eb;
+  border: 1px solid;
+  border-color: #2c2d2e;
+}
+
+html.dark .prose tbody tr {
+  border: 1px solid;
+  border-color: #e5e7eb;
 }
 
 .prose tbody tr:last-child {

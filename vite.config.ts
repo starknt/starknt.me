@@ -27,7 +27,8 @@ export default defineConfig({
         'vue',
         'vue/macros',
         '@vueuse/core',
-        '@vueuse/head'
+        '@vueuse/head',
+        'vue-router'
       ],
       dts: 'auto-imports.d.ts',
       dirs: [
@@ -46,6 +47,7 @@ export default defineConfig({
       extensions: ['vue', 'md']
     }),
     Markdown({
+      wrapperComponent: 'Post',
       wrapperClasses: 'prose m-auto',
       headEnabled: true,
       markdownItOptions: {
@@ -78,6 +80,7 @@ export default defineConfig({
         md.use(TOC, {
           includeLevel: [1, 2, 3],
           slugify,
+          markerPattern: /^\[toc\]/im
         })
       }
     })
