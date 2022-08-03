@@ -1,9 +1,10 @@
 export interface Post {
   title: string
   description?: string
-  createAt: string
-  updateAt: string
-  type: ''
-  subtype?: ''
+  date: string
+  createAt?: string
+  updateAt?: string
+  type?: string
+  subtype?: string
   duration: string
 }

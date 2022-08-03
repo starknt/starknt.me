@@ -8,9 +8,12 @@ import anchor from 'markdown-it-anchor'
 import LinkAttributes from 'markdown-it-link-attributes'
 import Shiki from 'markdown-it-shiki'
 import TOC from 'markdown-it-table-of-contents'
+import matter from 'gray-matter'
 import { slugify } from './slugify'
 import { defineConfig } from 'vite'
 import { alias } from './alias'
+import { resolve } from 'path'
+import { readFileSync } from 'fs'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -47,7 +50,19 @@ export default defineConfig({
       ]
     }),
     Pages({
-      extensions: ['vue', 'md']
+      extensions: ['vue', 'md'],
+      extendRoute(route) {
+        const path = resolve(__dirname, route.component.slice(1))
+
+        // inject meta data from frontmatter
+        if (path.endsWith('.md')) {
+          const md = readFileSync(path, 'utf8')
+          const { data } = matter(md)
+          route.meta = Object.assign(route.meta || {}, { frontmatter: data })
+        }
+
+        return route
+      }
     }),
     Markdown({
       wrapperComponent: 'Post',

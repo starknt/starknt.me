@@ -18,5 +18,4 @@ useHead({
   <StarportCarrier>
     <router-view />
   </StarportCarrier>
-  <Footer v-show="isEnter" />
 </template>

@@ -2,6 +2,7 @@ import { ViteSSG } from 'vite-ssg'
 import App from '~/App.vue'
 import routes from '~pages'
 import dayjs from 'dayjs'
+import { createHead } from '@vueuse/head'
 import LocalizedFormat from 'dayjs/plugin/localizedFormat.js'
 import 'uno.css'
 import './styles/main.css'
@@ -18,7 +19,10 @@ const scrollBehavior = (to: any, from: any, savedPosition: any) => {
 export const createApp = ViteSSG(
   App,
   { routes, scrollBehavior },
-  () => {
+  ({ app }) => {
+    const head = createHead()
+    app.use(head)
+
     dayjs.extend(LocalizedFormat)
   },
 )
