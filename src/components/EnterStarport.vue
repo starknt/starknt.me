@@ -2,7 +2,7 @@
 import { Starport } from 'vue-starport'
 const router = useRouter()
 const handleEnter = () => {
-  router.push('/')
+  router.push('/blog/posts')
 }
 </script>
 

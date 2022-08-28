@@ -1,7 +1,3 @@
 <template>
-  <NavBar />
-  <main px7 py10>
-    <RouterView />
-  </main>
-  <Footer />
+  <EnterStarport />
 </template>
