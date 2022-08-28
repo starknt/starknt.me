@@ -1,14 +1,17 @@
 {
-  "name": "starter-vue",
+  "name": "@starknt/website",
   "version": "0.0.0",
   "packageManager": "pnpm@7.5.2",
-  "description": "",
-  "author": "",
+  "description": "starknt's personal website",
+  "author": "starknt",
   "license": "MIT",
   "keywords": [
     "vue",
     "vue3",
-    "vite"
+    "vite",
+    "starknt",
+    "website",
+    "personal"
   ],
   "scripts": {
     "dev": "vite",
