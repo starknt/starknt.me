@@ -2,8 +2,8 @@
 const props = defineProps({
   size: {
     type: Number,
-    default: 48
-  }
+    default: 48,
+  },
 })
 
 const avatarSize = $computed(() => `${props.size}px`)
@@ -11,7 +11,7 @@ const avatarSize = $computed(() => `${props.size}px`)
 
 <template>
   <div inline-flex overflow-hidden class="rounded-50% size">
-    <img w-full h-full block src="/avatar.jfif" alt="avatar" />
+    <img w-full h-full block src="/avatar.jfif" alt="avatar">
   </div>
 </template>
 

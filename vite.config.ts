@@ -1,3 +1,5 @@
+import { resolve } from 'path'
+import { readFileSync } from 'fs'
 import Vue from '@vitejs/plugin-vue'
 import Unocss from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -9,18 +11,16 @@ import LinkAttributes from 'markdown-it-link-attributes'
 import Shiki from 'markdown-it-shiki'
 import TOC from 'markdown-it-table-of-contents'
 import matter from 'gray-matter'
-import { slugify } from './slugify'
 import { defineConfig } from 'vite'
+import { slugify } from './slugify'
 import { alias } from './alias'
-import { resolve } from 'path'
-import { readFileSync } from 'fs'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     Vue({
       reactivityTransform: true,
-      include: [/\.vue$/, /\.md$/]
+      include: [/\.vue$/, /\.md$/],
     }),
     Unocss({
       configFile: 'unocss.config.ts',
@@ -36,7 +36,7 @@ export default defineConfig({
       dts: 'auto-imports.d.ts',
       dirs: [
         './src/composables',
-      ]
+      ],
     }),
     Components({
       extensions: ['vue', 'md'],
@@ -47,7 +47,7 @@ export default defineConfig({
       ],
       resolvers: [
 
-      ]
+      ],
     }),
     Pages({
       extensions: ['vue', 'md'],
@@ -62,7 +62,7 @@ export default defineConfig({
         }
 
         return route
-      }
+      },
     }),
     Markdown({
       wrapperComponent: 'Post',
@@ -81,10 +81,10 @@ export default defineConfig({
 
         md.use(anchor, {
           permalink: anchor.permalink.linkInsideHeader({
-            symbol: "#",
-            renderAttrs: () => ({ 'aria-hidden': 'true' })
+            symbol: '#',
+            renderAttrs: () => ({ 'aria-hidden': 'true' }),
           }),
-          slugify
+          slugify,
         })
 
         md.use(LinkAttributes, {
@@ -98,10 +98,10 @@ export default defineConfig({
         md.use(TOC, {
           includeLevel: [1, 2, 3],
           slugify,
-          markerPattern: /^\[toc\]/im
+          markerPattern: /^\[toc\]/im,
         })
-      }
-    })
+      },
+    }),
   ],
   resolve: {
     alias,

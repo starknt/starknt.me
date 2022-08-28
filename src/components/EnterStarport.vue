@@ -7,8 +7,10 @@ const handleEnter = () => {
 </script>
 
 <template>
-  <div flex justify-center items-center flex-col w-screen h-screen bg-gradient-radial bg-gradient-from-emerald
-    bg-gradient-to-blue>
+  <div
+    flex justify-center items-center flex-col w-screen h-screen bg-gradient-radial bg-gradient-from-emerald
+    bg-gradient-to-blue
+  >
     <Starport w-48 h-48 port="avatar" class="rounded-50% flex justify-center items-center overflow-hidden">
       <Avatar :size="156" />
     </Starport>
@@ -24,7 +26,7 @@ const handleEnter = () => {
       </Starport>
     </div>
 
-    <button select-none type="button" @click="handleEnter" mt-6 flex gap-x-2 justify-center items-center>
+    <button select-none type="button" mt-6 flex gap-x-2 justify-center items-center @click="handleEnter">
       <i class="i-mdi-key" />
       Enter
     </button>
