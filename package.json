@@ -17,8 +17,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "typecheck": "vue-tsc --noEmit",
-    "test": "vitest",
-    "lint-staged": "lint-staged"
+    "test": "vitest"
   },
   "dependencies": {
     "@vueuse/core": "^8.9.4",
