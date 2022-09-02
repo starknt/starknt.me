@@ -12,12 +12,12 @@ export default defineConfig({
     }),
     presetUno(),
     presetAttributify(),
-    presetWebFonts({
-      fonts: {
-        sans: 'Roboto',
-        mono: ['Fira Code', 'Fira Mono:400,700'],
-      },
-    }),
+    // presetWebFonts({
+    //   fonts: {
+    //     sans: 'Roboto',
+    //     mono: ['Fira Code', 'Fira Mono:400,700'],
+    //   },
+    // }),
   ],
   shortcuts: [
 
