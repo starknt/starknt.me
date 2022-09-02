@@ -1,16 +1,25 @@
 <script setup lang="ts">
 import { Starport } from 'vue-starport'
+import Button from './Button.vue'
+const COUNTER = 5
 const router = useRouter()
+const interval = useInterval(1000)
 const handleEnter = () => {
   router.push('/blog/posts')
 }
+
+watch(interval, () => {
+  if (interval.value === 5)
+    setTimeout(() => handleEnter(), 200);
+})
+
+const counter = $computed(() => `${COUNTER - interval.value}`)
+
 </script>
 
 <template>
-  <div
-    flex justify-center items-center flex-col w-screen h-screen bg-gradient-radial bg-gradient-from-emerald
-    bg-gradient-to-blue
-  >
+  <div flex justify-center items-center flex-col w-screen h-screen bg-gradient-radial bg-gradient-from-emerald
+    bg-gradient-to-blue>
     <Starport w-48 h-48 port="avatar" class="rounded-50% flex justify-center items-center overflow-hidden">
       <Avatar :size="156" />
     </Starport>
@@ -26,9 +35,9 @@ const handleEnter = () => {
       </Starport>
     </div>
 
-    <button select-none type="button" mt-6 flex gap-x-2 justify-center items-center @click="handleEnter">
+    <Button mt-6 @click="handleEnter">
       <i class="i-mdi-key" />
-      Enter
-    </button>
+      <p :title="counter">Enter</p>
+    </Button>
   </div>
 </template>
