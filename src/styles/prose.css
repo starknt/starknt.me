@@ -614,3 +614,7 @@ html.dark .prose tbody tr {
 .prose-sm> :last-child {
   margin-bottom: 0;
 }
+
+table {
+  border-collapse: separate;
+}

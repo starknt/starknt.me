@@ -9,6 +9,10 @@
   --c-scrollbar-hover: #bbb;
 }
 
+html, body, #root {
+  transition: background-color .5s;
+}
+
 html {
   background-color: var(--c-bg);
 }
