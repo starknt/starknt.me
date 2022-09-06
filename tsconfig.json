@@ -27,10 +27,10 @@
   },
   "include": [
     "src",
-    "./components.d.ts",
-    "./auto-imports.d.ts",
-    "./shims.d.ts",
-    "./env.d.ts"
+    "components.d.ts",
+    "auto-imports.d.ts",
+    "shims.d.ts",
+    "env.d.ts"
   ],
   "references": [
     {
