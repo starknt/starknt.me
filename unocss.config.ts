@@ -3,6 +3,7 @@ import { defineConfig, presetAttributify, presetIcons, presetUno, presetWebFonts
 export default defineConfig({
   presets: [
     presetIcons({
+      autoInstall: true,
       extraProperties: {
         'display': 'inline-block',
         'height': '1.2em',

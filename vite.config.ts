@@ -10,6 +10,7 @@ import anchor from 'markdown-it-anchor'
 import LinkAttributes from 'markdown-it-link-attributes'
 import Shiki from 'markdown-it-shiki'
 import TOC from 'markdown-it-table-of-contents'
+import { VitePWA } from 'vite-plugin-pwa'
 import matter from 'gray-matter'
 import { defineConfig } from 'vite'
 import { slugify } from './slugify'
@@ -102,6 +103,7 @@ export default defineConfig({
         })
       },
     }),
+    VitePWA()
   ],
   resolve: {
     alias,
