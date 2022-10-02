@@ -1,4 +1,5 @@
 import 'vue-router'
+import type { Post } from '~/types'
 
 declare module '*.vue' {
     import { defineComponent } from 'vue'
@@ -8,6 +9,6 @@ declare module '*.vue' {
 
 declare module 'vue-router' {
     interface RouteMeta {
-        frontmatter: Record<string, string>
+        frontmatter: Post
     }
 }

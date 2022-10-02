@@ -5,7 +5,7 @@ const COUNTER = 5
 const router = useRouter()
 const interval = useInterval(1000)
 const handleEnter = () => {
-  router.push('/blog/posts')
+  router.push('/blog')
 }
 
 watch(interval, () => {

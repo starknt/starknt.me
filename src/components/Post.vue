@@ -6,8 +6,6 @@ const { frontmatter } = defineProps({
   },
 })
 
-console.log(frontmatter)
-
 const router = useRouter()
 const content = ref<HTMLDivElement>()
 
