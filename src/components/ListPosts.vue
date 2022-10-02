@@ -23,11 +23,13 @@ const handleRoute = (path: string) => {
     <h2 text-xl>
       文章列表
     </h2>
-    <div v-for="post in posts" :key="post.date" :to="post.path" 
+    <div
+      v-for="post in posts" :key="post.date" :to="post.path"
       flex="~ col" gap-y-2 p-4 bg-gray-2 op-50 hover="op-100 bg-gray-100"
-      dark="bg-transparent dark:op-90 hover:bg-transparent hover:op-100" 
+      dark="bg-transparent dark:op-90 hover:bg-transparent hover:op-100"
       rounded-md cursor-pointer
-      @click="handleRoute(post.path)">
+      @click="handleRoute(post.path)"
+    >
       <div>
         {{ post.title }}
       </div>

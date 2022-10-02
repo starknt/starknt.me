@@ -103,7 +103,7 @@ export default defineConfig({
         })
       },
     }),
-    VitePWA()
+    VitePWA(),
   ],
   resolve: {
     alias,

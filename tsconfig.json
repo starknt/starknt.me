@@ -12,6 +12,7 @@
     "esModuleInterop": true,
     "noImplicitAny": false,
     "suppressImplicitAnyIndexErrors": false,
+    "forceConsistentCasingInFileNames": true,
     "lib": [
       "esnext",
       "dom"

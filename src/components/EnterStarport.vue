@@ -10,16 +10,17 @@ const handleEnter = () => {
 
 watch(interval, () => {
   if (interval.value === 5)
-    setTimeout(() => handleEnter(), 200);
+    setTimeout(() => handleEnter(), 200)
 })
 
 const counter = $computed(() => `${COUNTER - interval.value}`)
-
 </script>
 
 <template>
-  <div flex justify-center items-center flex-col w-screen h-screen bg-gradient-radial bg-gradient-from-emerald
-    bg-gradient-to-blue>
+  <div
+    flex justify-center items-center flex-col w-screen h-screen bg-gradient-radial bg-gradient-from-emerald
+    bg-gradient-to-blue
+  >
     <Starport w-48 h-48 port="avatar" class="rounded-50% flex justify-center items-center overflow-hidden">
       <Avatar :size="156" />
     </Starport>
@@ -37,7 +38,9 @@ const counter = $computed(() => `${COUNTER - interval.value}`)
 
     <Button mt-6 @click="handleEnter">
       <i class="i-mdi-key" />
-      <p :title="counter">Enter</p>
+      <p :title="counter">
+        Enter
+      </p>
     </Button>
   </div>
 </template>
