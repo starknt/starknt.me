@@ -20,5 +20,3 @@ dist-ssr
 __snapshots__
 
 .vercel
-auto-imports.d.ts
-components.d.ts
