@@ -10,8 +10,6 @@ declare module '@vue/runtime-core' {
     Author: typeof import('./src/components/Author.vue')['default']
     Avatar: typeof import('./src/components/Avatar.vue')['default']
     Button: typeof import('./src/components/Button.vue')['default']
-    Buttton: typeof import('./src/components/Buttton.vue')['default']
-    Enter: typeof import('./src/components/EnterStarport.vue')['default']
     EnterStarport: typeof import('./src/components/EnterStarport.vue')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
     Github: typeof import('./src/components/Github.vue')['default']
@@ -23,7 +21,6 @@ declare module '@vue/runtime-core' {
     RouterView: typeof import('vue-router')['RouterView']
     Starport: typeof import('vue-starport')['Starport']
     StarportCarrier: typeof import('vue-starport')['StarportCarrier']
-    SubNav: typeof import('./src/components/NavBar.vue')['default']
     ToggleTheme: typeof import('./src/components/ToggleTheme.vue')['default']
     WeChat: typeof import('./src/components/WeChat.vue')['default']
   }
