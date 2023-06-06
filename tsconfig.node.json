@@ -16,6 +16,7 @@
   "include": [
     "vite.config.ts",
     "alias.ts",
-    "slugify.ts"
+    "slugify.ts",
+    "module.d.ts"
   ]
 }

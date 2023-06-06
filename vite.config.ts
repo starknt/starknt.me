@@ -16,6 +16,7 @@ import { defineConfig } from 'vite'
 import { slugify } from './slugify'
 import { alias } from './alias'
 
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
